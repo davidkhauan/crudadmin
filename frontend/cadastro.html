@@ -14,23 +14,23 @@
     />
     <meta name="author" content="Yasmin Barcelos" />
 
-    <title>Cadastrar Produto - UniFood</title>
+    <title>Hamburguer - Cadastro</title>
 
     <link rel="icon" href="images/favicon.png" type="image/png" />
 
+    <!-- Link do Bootstrap -->
     <link
       rel="stylesheet"
-      type="text/css"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css"
-      integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ=="
     />
     <link
       rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
     />
     <link href="css/style.css" rel="stylesheet" />
     <link href="css/responsive.css" rel="stylesheet" />
@@ -78,55 +78,37 @@
         </div>
       </header>
     </div>
-
-    <section class="book_section layout_padding">
-      <div class="container">
-        <div class="heading_container">
-          <h2>Cadastrar Produto</h2>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-md-6">
-            <div class="form_container">
-              <form action="">
-                <div>
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Nome do Produto"
-                  />
-                </div>
-                <div>
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Preço do Produto"
-                  />
-                </div>
-                <div>
-                  <textarea
-                    class="form-control"
-                    rows="4"
-                    placeholder="Descrição do Produto"
-                  ></textarea>
-                </div>
-                <div class="btn_box">
-                  <button>Cadastrar Produto</button>
-                </div>
-              </form>
-            </div>
+    <section id="registerForm" class="container mt-5">
+        <h2>Cadastrar Usuário</h2>
+        <form action="/register" method="POST" enctype="multipart/form-data">
+          <div class="form-group">
+            <label for="name">Nome Completo</label>
+            <input type="text" class="form-control" id="name" name="name" required />
           </div>
-          <div class="col-md-6 d-none d-md-block">
-              <div class="map_container"></div>
-              <img
-                  src="images/addproduct.png"
-                  alt="Produto"
-                  class="img-fluid"
-                />
-            </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" name="email" required />
           </div>
-        </div>
-      </div>
-    </section>
+          <div class="form-group">
+            <label for="phone">Telefone</label>
+            <input type="text" class="form-control" id="phone" name="phone" required />
+          </div>
+          <div class="form-group">
+            <label for="password">Senha</label>
+            <input type="password" class="form-control" id="password" name="password" required />
+          </div>
+          <div class="form-group">
+            <label for="confirmPassword">Confirmar Senha</label>
+            <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required />
+          </div>
+          <div class="form-group">
+            <label for="profileImage">Imagem de Perfil</label>
+            <input type="file" class="form-control-file" id="profileImage" name="profileImage" />
+          </div>
+          <button type="submit" class="btn btn-primary">Registrar</button>
+        </form>
+      </section>
+  
 
     <footer class="footer_section">
       <div class="container">
@@ -167,6 +149,7 @@
       </div>
     </footer>
 
+    <!-- Scripts do Bootstrap e dependências -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
